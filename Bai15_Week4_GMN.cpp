@@ -30,7 +30,7 @@ void findMax(int (&a)[100][100], int n, int m, int &maxVal, int &rowIndex, int &
 }
 
 
-// Hàm sắp xếp cột theo thứ tự tăng dần
+// Hàm sắp xếp cột theo thứ tự tăng dần (Ascending)
 void sortColumns(int (&a)[100][100], int n, int m) {
     for (int j = 0; j < m; j++) {
         for (int i = 0; i < n - 1; i++) {

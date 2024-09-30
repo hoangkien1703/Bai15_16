@@ -76,6 +76,7 @@ int main(){
     
     if (n < 0||n >100){
         cerr << "So phan tu khong hop le. "<< endl;
+        return -1;
     }
     cout<<"Nhap mang A:\n";
     for(int i = 0; i < n; i++){

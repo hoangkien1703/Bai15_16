@@ -3,7 +3,7 @@ Bài 15: Viết chương trình nhập vào vào ma trận A có n dòng, m cộ
 các phần tử là những số nguyên lớn hơn 0 và nhỏ hơn 100 được nhập vào từ bàn phím. 
 Thực hiện các chức năng sau:
 1. Tìm phần tử lớn nhất của ma trận cùng chỉ số của số đó.
-2. Tìm và in ra các phần tử là số nguyên tố của ma trận (các phần tử không nguyên tố thì thay bằng số 0).
+2. Tìm và in ra các phần tử là số nguyên tố của ma trận (các phần tử không phai so nguyên tố thì thay bằng số 0).
 3. Sắp xếp tất cả các cột của ma trận theo thứ tự tăng dần và in kết quả ra màn hình.
 */
 
@@ -87,7 +87,7 @@ int main(){
         cerr << "So phan tu khong hop le. "<< endl;
         return -1;
     }
-    
+
     cout << "Nhap ma tran A:\n";
     for (int i=0;i<n; i++){
         for (int j=0; j<m; j++){

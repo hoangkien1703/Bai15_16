@@ -2,7 +2,7 @@
 #include <string>
 #include <cmath>
 #include <vector>
-#include <algorithm> 
+#include <algorithm> // for sort and insert
 
 using namespace std;
 
@@ -17,10 +17,10 @@ void baiTap1() {
         cout << "Nhap do dai ba canh: ";
         cin >> canhA >> canhB >> canhC;
 
-        
+        // Kiểm tra điều kiện tam giác
         if (canhA + canhB > canhC && canhA + canhC > canhB && canhB + canhC > canhA && canhA > 0 && canhB > 0 && canhC > 0) {
             chuVi = canhA + canhB + canhC;
-            double nCv = chuVi / 2.0; 
+            double nCv = chuVi / 2.0; // Nửa chu vi
             dienTich = sqrt(nCv * (nCv - canhA) * (nCv - canhB) * (nCv - canhC)); 
         } else {
             cout << "Do dai ba canh khong hop le." << endl;
@@ -28,7 +28,7 @@ void baiTap1() {
         }
     } else if (tenHinh == "hinh chu nhat") {
         cout << "Nhap chieu dai va chieu rong: ";
-        cin >> canhA >> canhB; 
+        cin >> canhA >> canhB; // canhA là chiều dài, canhB là chiều rộng
 
         if (canhA > 0 && canhB > 0) {
             chuVi = 2 * (canhA + canhB);
@@ -140,7 +140,7 @@ void baiTap5() {
 
     vector<vector<int>> maTran(m, vector<int>(n));
 
-    
+    // a) Nhập và xuất mảng
     cout << "Nhap cac phan tu cua ma tran:\n";
     for (int i = 0; i < m; ++i) {
         for (int j = 0; j < n; ++j) {
@@ -156,7 +156,7 @@ void baiTap5() {
         cout << endl;
     }
 
-    
+    // b) Chuyển phần tử không chẵn thành 0
     for (int i = 0; i < m; ++i) {
         for (int j = 0; j < n; ++j) {
             if (maTran[i][j] % 2 != 0) {
@@ -173,7 +173,7 @@ void baiTap5() {
         cout << endl;
     }
 
-    
+    // c) Sắp xếp giảm dần và chèn X
     vector<int> mang1Chieu;
     for (int i = 0; i < m; ++i) {
         for (int j = 0; j < n; ++j) {
@@ -187,7 +187,7 @@ void baiTap5() {
     cout << "Nhap gia tri X can chen: ";
     cin >> x;
 
-    
+    // Tìm vị trí chèn X để mảng vẫn giảm dần
     auto it = upper_bound(mang1Chieu.begin(), mang1Chieu.end(), x, greater<int>());
     mang1Chieu.insert(it, x);
 
